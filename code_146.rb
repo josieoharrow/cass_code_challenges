@@ -1,5 +1,4 @@
 s='
-t=Time.now
 def j(s)
 b = 0
 while b<150000
@@ -15,9 +14,7 @@ threads=[]
   threads<<Thread.new{j(s)}
 }
 threads.each(&:join)
-p(Time.now-t)
 '
-t=Time.now
 def j(s)
 b = 0
 while b<150000
@@ -33,4 +30,3 @@ threads=[]
   threads<<Thread.new{j(s)}
 }
 threads.each(&:join)
-p(Time.now-t)
