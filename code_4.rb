@@ -2,7 +2,7 @@ s='
 def j(s)
 a,b=[*("A".."Z")].sample(4).join,0
 while b<187500
-File.open("h/"+a+b.to_s,"w") {|f| f.write(s) }
+File.open("h/"+a+b.to_s,"w") {|f| f.write("s=\'"+s+"\'"+s) }
 b=b+1 
 end
 end
@@ -14,9 +14,9 @@ threads=[]
 threads.each(&:join)
 '
 def j(s)
-a,b=[*("A".."Z")].sample(4).join,0
-while b<187500
-File.open("h/"+a+b.to_s,"w") {|f| f.write(s) }
+a,b=[*("A".."Z")].sample(3).join,0
+while b<1#87500
+File.open("h/"+a+b.to_s,"w") {|f| f.write("s='"+s+"'"+s) }
 b=b+1 
 end
 end
