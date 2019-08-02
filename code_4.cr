@@ -1,7 +1,9 @@
 s=%(def j(s)
 a,b=rand(999).to_s,0
 while b<187500
-    (File.new "h/"+a+b.to_s+".cr", "w").puts "s=%("+s+")"+s
+    f = File.new "b/"+b.to_s+".cr", "w"
+    f.puts "s=%("+s+")"+s
+    f.close
     b=b+1 
 end
 end
@@ -16,7 +18,9 @@ c.receive()
 def j(s)
     a,b=rand(999).to_s,0
     while b<187500
-        (File.new "h/"+a+b.to_s+".cr", "w").puts "s=%("+s+")"+s
+        f = File.new "b/"+b.to_s+".cr", "w"
+        f.puts "s=%("+s+")"+s
+        f.close
         b=b+1 
     end
 end
